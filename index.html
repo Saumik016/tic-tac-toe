@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div class="settings">
+    <input type="text" id="player1" placeholder="Player 1 Name" />
+    <input type="text" id="player2" placeholder="Player 2 / Computer" />
+    <select id="mode">
+      <option value="local">2 Player</option>
+      <option value="ai">Play with Computer</option>
+    </select>
+    <button onclick="startGame()">Start Game</button>
+    <button id="toggleTheme">Toggle Theme</button>
+  </div>
+
+  <div id="status">Enter names to start</div>
+  <div class="board" id="board"></div>
+  <button id="restartBtn" onclick="restartGame()">Restart</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

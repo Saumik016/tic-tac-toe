@@ -1,0 +1,82 @@
+:root {
+  --primary: #2e86de;
+  --secondary: #f1f2f6;
+  --text: #2f3542;
+  --bg: #f9f9f9;
+  --win: #2ed573;
+  --draw: #ffa502;
+}
+
+body.dark {
+  --primary: #1e90ff;
+  --secondary: #2f3542;
+  --text: #f1f2f6;
+  --bg: #1e1e2f;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.settings {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input, select, button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cell.X { color: #e74c3c; }
+.cell.O { color: var(--primary); }
+
+#status {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+#restartBtn, #toggleTheme {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  margin: 5px;
+}
